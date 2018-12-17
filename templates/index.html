@@ -1,20 +1,25 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <title>Flask Sample App: {{data['IP']}}</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <title>Flask Sample App: {{data['HostName']}}[{{data['IP']}}]</title>
 </head>
 <body>
-    <table>
-        <th>
-            <td>Key</td>
-            <td>Value</td>
-        </th>
-        {% for k, v in data %}
+    <table class="table table-striped">
+        <thead class="thead-dark">
         <tr>
-            <td>k</td>
-            <td>v</td>
+            <th>Key</th>
+            <th>Value</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for k, v in data.items() %}
+        <tr>
+            <td>{{k}}</td>
+            <td>{{v}}</td>
         </tr>
         {% endfor %}
+        </tbody>
     </table>
 </body>
 </html>
