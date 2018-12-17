@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Flask Sample App: {{data['IP']}}</title>
+</head>
+<body>
+    <table>
+        <th>
+            <td>Key</td>
+            <td>Value</td>
+        </th>
+        {% for k, v in data %}
+        <tr>
+            <td>k</td>
+            <td>v</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
